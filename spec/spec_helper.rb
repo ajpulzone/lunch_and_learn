@@ -20,7 +20,7 @@ SimpleCov.start 'rails'
 SimpleCov.add_filter %w[spec config application_cable bin channels mailers jobs contollers poros services]
 
 # Configure webmock for mocking external API calls during testing
-require 'webmock/rspec'
+# require 'webmock/rspec'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
