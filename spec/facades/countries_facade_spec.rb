@@ -17,6 +17,7 @@ RSpec.describe CountriesFacade do
     it "returns a single country object" do
       country = "Ireland"
       results = CountriesFacade.find_a_country(country)
+      expect(results.name).to eq("Ireland")
     end
   end
   
