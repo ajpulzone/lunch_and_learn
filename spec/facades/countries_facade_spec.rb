@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe CountriesFacade do
   describe "#countries" do
-    it "returns and array of country names" do
+    it "returns and array of country objects" do
       countries = CountriesFacade.countries
       expect(countries).to be_an(Array)
       expect(countries.count).to eq(250)
@@ -12,6 +12,13 @@ RSpec.describe CountriesFacade do
       expect(countries[0].name).to_not eq("Salem")
     end
   end 
+
+  describe "#find_a_country" do
+    it "returns a single country object" do
+      country = "Ireland"
+      results = CountriesFacade.find_a_country(country)
+    end
+  end
   
   describe "#random_country" do
     it "returns a random country name" do

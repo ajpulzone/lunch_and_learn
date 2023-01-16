@@ -9,6 +9,11 @@ class CountriesService
     parsed_response = parsed_response(response)
   end
 
+  def self.find_country(country)
+    response = conn.get("/v3.1/name/#{country}?fullText=true")
+    parsed_response = parsed_response(response)
+  end
+
   def self.parsed_response(response)
     JSON.parse(response.body, symbolize_names: true)
   end
