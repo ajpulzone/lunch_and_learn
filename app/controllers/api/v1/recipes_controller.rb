@@ -1,15 +1,13 @@
 class Api::V1::RecipesController < ApplicationController
 
   def index
-    if params[:country] != nil || params[:country].empty? == false
-      result = CountriesFacade.find_a_country(params[:country])
-      recipes = CountryRecipesFacade.find_recipes_by_country(result.name)
-      binding.pry
+    if params[:country] != nil
+      recipes = RecipesFacade.recipes_by_country(params[:country])
       render json: RecipeSerializer.new(recipes)
-    else 
-      binding.pry
-      render json: CountryRecipesSerializer.new(RecipesFacade.recipes_by_country(CountriesFacade.random_country))
-      binding.pry
+    elsif params[:country] == nil
+      country = CountriesFacade.random_country
+      recipes = RecipesFacade.recipes_by_country(country.name)
+      render json: RecipeSerializer.new(recipes)
     end 
   end
 end
