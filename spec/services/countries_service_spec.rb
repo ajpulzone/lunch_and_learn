@@ -80,5 +80,27 @@ RSpec.describe CountriesService do
       it "NEEDS TO BE WRITTEN" do
       end
     end
+
+    describe "#find_country" do
+      describe "happy path" do
+        it "finds a country based on name" do
+          country_name = "Ireland"
+          country = CountriesService.find_country(country_name)
+
+          expect(country).to be_an(Array)
+          expect(country.count).to eq(1)
+          expect(country.first).to be_a(Hash)
+          expect(country.first).to have_key(:name)
+          expect(country.first[:name]).to have_key(:common)
+          expect(country.second).to eq(nil)
+        end
+      end
+    end
+
+      xdescribe "sad path" do
+        it "NEED TO WRITE " do
+      end
+    end
+
   end
 end
