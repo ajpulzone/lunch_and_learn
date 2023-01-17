@@ -10,6 +10,6 @@ class User < ApplicationRecord
 
   private
     def create_api_key
-        self.user_api_key = SecureRandom.hex
+      self.user_api_key = SecureRandom.hex
     end
   end

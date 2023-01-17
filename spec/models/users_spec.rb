@@ -1,4 +1,4 @@
-require "rails_helper"
+ require "rails_helper"
 
 RSpec.describe User do
   describe "validations" do
@@ -13,10 +13,12 @@ RSpec.describe User do
   end
 
   describe "class methods" do
-    xdescribe "#create_api_key" do
-      it "NEEDS TO BE STUBBED OR SOMETHING, EMAIL IS NOT UNIQUE SO ONLY PASSES ONCE: creates a user_api_key upon creation of a user" do
-      user = User.create!(name: "Pudding", email: "pudding@gmail.com")
-      binding.pry
+    describe "#create_api_key" do
+      it "creates a user_api_key upon creation of a user" do
+      
+      user = User.new(name: "Pudding", email: "pudding@gmail.com")
+      expect(user.user_api_key).to eq(nil)
+      user.save
       expect(user.user_api_key).to be_a(String)
       end
     end
