@@ -133,17 +133,17 @@ You will need to sign up for the following API keys in order to use this repo:
    - Example Response:
 
 ```json
-  {
+{
     "data": {
-      "type": "user",
-      "id": "1",
-      "attributes": {
-        "name": "Athena Dao",
-        "email": "athenadao@bestgirlever.com",
-        "api_key": "jgn983hy48thw9begh98h4539h4"
-      }
+        "id": "6",
+        "type": "user",
+        "attributes": {
+            "name": "Drake",
+            "email": "imamuppet@gmail.com",
+            "user_api_key": "ec21d9eb6929c7d79427f5be5bc7a16b"
+        }
     }
-  }
+}
 ```
 <br>
 
@@ -153,12 +153,9 @@ You will need to sign up for the following API keys in order to use this repo:
   - Example Response:
 
 ```json
-  {
-    "api_key": "jgn983hy48thw9begh98h4539h4",
-    "country": "thailand",
-    "recipe_link": "https://www.tastingtable.com/.....",
-    "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
-  }
+{
+    "success": "Favorite added successfully"
+}
 ```
 
 <li>Get a Users Favorites</li><br>
@@ -167,29 +164,19 @@ You will need to sign up for the following API keys in order to use this repo:
    - Example Response:
 
 ```json
-  {
+{
     "data": [
-      {
-        "id": "1",
-              "type": "favorite",
-              "attributes": {
-                "recipe_title": "Recipe: Egyptian Tomato Soup",
-                  "recipe_link": "http://www.thekitchn.com/recipe-egyptian-tomato-soup-weeknight....",
-                  "country": "egypt",
-                  "created_at": "2022-11-02T02:17:54.111Z"
-              }
-          },
-          {
-            "id": "2",
-              "type": "favorite",
-              "attributes": {
-                "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)",
-                  "recipe_link": "https://www.tastingtable.com/.....",
-                  "country": "thailand",
-                  "created_at": "2022-11-07T03:44:08.917Z"
-              }
-          }
-      ]
-  }
+        {
+            "id": "1",
+            "type": "favorite",
+            "attributes": {
+                "country": "Ireland",
+                "recipe_link": "http://www.edamam.com/recipe/cheddar-colcannon-torte-97c47f3162d83a9da30673929bbf8f7a/ireland",
+                "recipe_title": "Cheddar Colcannon Torte",
+                "created_at": "2023-01-17T04:28:23.879Z"
+            }
+        }
+    ]
+}
 ```
 </ol>
