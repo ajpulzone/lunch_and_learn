@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2023_01_15_222918) do
 
   create_table "favorites", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "type", default: "favorite"
     t.string "user_api_key"
     t.string "country"
     t.string "recipe_link"
