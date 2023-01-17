@@ -9,6 +9,7 @@ gem 'factory_bot_rails'
 gem 'faker'
 gem 'figaro'
 gem 'jsonapi-serializer'
+gem "capybara"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
