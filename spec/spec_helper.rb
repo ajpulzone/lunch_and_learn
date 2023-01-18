@@ -17,7 +17,11 @@
 # Start simplecov test coverage gem
 require 'simplecov'
 SimpleCov.start 'rails'
-SimpleCov.add_filter %w[spec config application_cable bin channels mailers jobs contollers poros services]
+SimpleCov.add_filter %w[spec]
+
+require "webmock/rspec"
+
+# config application_cable bin channels mailers jobs contollers poros services
 
 # Configure webmock for mocking external API calls during testing
 # require 'webmock/rspec'
