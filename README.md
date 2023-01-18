@@ -12,11 +12,22 @@
 <br>
 
 # Table of Contents
+  - [Learning Goals](#learning-goals)
   - [API Key Sign-Up Instructions](#api-key-sign-up-instructions)
   - [Developer Setup](#developer-setup)
   - [Tech & Tools Used](#tech-and-tools)
   - [Database Schema](#database-schema)
   - [Endpoints](#endpoints)
+
+## Learning Goals
+
+<ul>
+  <li> Expose an API that aggregates data from multiple external APIs </li>
+  <li> Expose an API that requires an authentication token </li>
+  <li> Expose an API for CRUD functionality </li>
+  <li> Determine completion criteria based on the needs of other developers </li>
+  <li> Test both API consumption and exposure, making use of at least one mocking tool (VCR, Webmock, etc). </li>
+</ul>
 
 ## API Key Sign Up Instructions
 
